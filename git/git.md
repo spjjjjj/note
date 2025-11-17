@@ -35,7 +35,11 @@ git log --pretty=oneline
 最新的在上面,hash
 todo:format 占位符
 
+回退某一版本
 git checkout <hash>
+
+取回远端最新消息
+git fetch origin
 
 
 
@@ -44,4 +48,4 @@ todo:git stash 把所有未提交的修改（包括暂存的和非暂存的）�
 
 todo:多个仓库管理
 todo：更改某一版本的内容
-todo：分支相关
+todo：分支相关 创建分支
