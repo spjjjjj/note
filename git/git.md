@@ -27,6 +27,7 @@ git push -u origin master
 这样做的好处是，下次你在同一个分支上使用git push时，就不需要再指定远程仓库和分支名了。
 Git会记住你上一次推送的远程仓库和分支，自动将本地分支的更新推送到之前指定的远程分支。
 使用这个命令后，如果你在master分支上有新的更改，下次只需简单地输入git push，Git就会将更改推送到origin的master分支。
+--force 强制推送 强推
 
 查看更新日志
 git log --pretty=oneline
@@ -55,7 +56,18 @@ todo:git stash 把所有未提交的修改（包括暂存的和非暂存的）�
 todo:多个仓库管理
 todo：更改某一版本的内容
 
-创建分支 名字为v4 hash为9854d15
+
+查看分支
+git branch 
+-a 列出所有本地和远程分支
+*代表当前的活动分支
+
+创建分支 名字为v4 hash为9854d15  缺省hash创建空分支
 git branch v4 9854d15
 
-todo：分支相关 分支merge
+todo：删除分支 分支相关 分支切换 重命名分支 分支merge   i 进入编辑模式    esc 退出编辑模式    :wq 退出    :q! 取消merge
+
+todo: # 把 master 回退到 merge 之前那次提交（3d5d423）
+git reset --hard 3d5d423
+
+todo: origin master head 区别
