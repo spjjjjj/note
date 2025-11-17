@@ -57,10 +57,13 @@ todo:多个仓库管理
 todo：更改某一版本的内容
 
 
-查看分支
+列出分支
 git branch 
 -a 列出所有本地和远程分支
 *代表当前的活动分支
+
+查看特定分支
+git show 9854d15
 
 创建分支 名字为v4 hash为9854d15  缺省hash创建空分支
 git branch v4 9854d15
@@ -71,3 +74,5 @@ todo: # 把 master 回退到 merge 之前那次提交（3d5d423）
 git reset --hard 3d5d423
 
 todo: origin master head 区别
+
+todo：git reflog
