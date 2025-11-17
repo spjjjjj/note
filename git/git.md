@@ -40,7 +40,7 @@ git checkout <hash>
 
 
 
-
+todo:git stash 把所有未提交的修改（包括暂存的和非暂存的）都保存起来，用于后续恢复当前工作目录。
 
 todo:多个仓库管理
 todo：更改某一版本的内容
