@@ -30,10 +30,16 @@ Git会记住你上一次推送的远程仓库和分支，自动将本地分支�
 
 查看更新日志
 git log --pretty=oneline
+git log --oneline --graph --all
+git log --all --graph --oneline --decorate
+--decorate 显示每个提交的引用，包括分支、标签等
+--all 显示所有分支的提交历史，包括远程分支和分离头指针。
 --pretty=oneline 每次更新内容在一行内展示
 --graph 以 ASCII 图形显示分支和合并历史。q退出   f向下翻页 b向上翻页 j下滚 k上滚
 最新的在上面,hash
 todo:format 占位符
+todo：标签
+todo：游离头？
 
 回退某一版本
 git checkout <hash>
