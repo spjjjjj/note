@@ -9,6 +9,8 @@ completion = client.chat.completions.create(    #调用 chat.completions 接口 
     model="gpt-4o",     #指定使用的模型
 
     response_format={"type": "json_object"}, #指定响应格式为 JSON 对象
+    seed = 40,    #设置随机种子以确保结果可重复
+    n = 3,   #要生成的回答数量
 
     messages=[
         {"role": "system", "content": "assistant"},     #系统角色消息
