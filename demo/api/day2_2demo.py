@@ -2,6 +2,10 @@ from openai import OpenAI
 # pip install openai==1.40.3
 import os
 # 从环境变量中读取OPENAI_BASE_URL
+
+# pip install httpx==0.27.2
+# openai 包运行报错TypeError: Client.__init__() got an unexpected keyword argument ‘proxies‘
+
 print(os.getenv('OPENAI_BASE_URL'))
 # 初始化 OpenAI 服务。
 client = OpenAI()   #使用环境变量 OPENAI_API_KEY 和 OPENAI_BASE_URL 进行配置
