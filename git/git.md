@@ -1,53 +1,71 @@
-配置用户名邮箱地址
-git config --global user.name 'XXXX'
+## 配置用户名邮箱地址
+```
+git config --global user.name 'XXXX'  
 git config --global user.email XXXXXXXXX@qq.com
-
-初始化本地项目（用于git提交到github仓库）
+```
+## 初始化本地项目（用于git提交到github仓库）
+```
 git init
-
-将所有更改添加到暂存区
+```
+## 将所有更改添加到暂存区
+```
 git add .
+```
+`git commit`用于将暂存区的更改记录到本地 Git 仓库中，形成一个新的提交快照。  
 
-git commit 命令用于将暂存区的更改记录到本地 Git 仓库中，形成一个新的提交快照。
-命令格式:
-git commit -m "提交信息"
+命令格式:  
+```
+git commit -m "提交信息"  
+```
 其中，-m 选项后跟的字符串是本次提交的说明信息，用于描述这次提交的目的和内容。
 提交的功能
 
-将本地 Git 仓库与远程仓库关联起来
+## 将本地 Git 仓库与远程仓库关联起来
+```
 git remot add origin git@github.com:spjjjjj/note.git
+```
 
-拉取仓库中的代码，最好每次都拉取。
-git pull origin master
+## 拉取仓库中的代码，最好每次都拉取。
+```
+git pull origin master  
+```
 todo：检查冲突
 
-将本地的master分支的更改推送到远程仓库
-git push -u origin master
--u参数是--set-upstream的简写，这个参数在推送时会将本地分支与远程分支关联起来。
-这样做的好处是，下次你在同一个分支上使用git push时，就不需要再指定远程仓库和分支名了。
-Git会记住你上一次推送的远程仓库和分支，自动将本地分支的更新推送到之前指定的远程分支。
-使用这个命令后，如果你在master分支上有新的更改，下次只需简单地输入git push，Git就会将更改推送到origin的master分支。
---force 强制推送 强推
+## 将本地的master分支的更改推送到远程仓库
+```
+git push -u origin master  
+```
+`-u`参数是`--set-upstream`的简写，这个参数在推送时会将本地分支与远程分支关联起来。  
+这样做的好处是，下次你在同一个分支上使用git push时，就不需要再指定远程仓库和分支名了。  
+Git会记住你上一次推送的远程仓库和分支，自动将本地分支的更新推送到之前指定的远程分支。  
+使用这个命令后，如果你在master分支上有新的更改，下次只需简单地输入git push，Git就会将更改推送到origin的master分支。  
+`--force` 强制推送（强推）
 
-查看更新日志
-git log --pretty=oneline
-git log --oneline --graph --all
-git log --all --graph --oneline --decorate
---decorate 显示每个提交的引用，包括分支、标签等
---all 显示所有分支的提交历史，包括远程分支和分离头指针。
---pretty=oneline 每次更新内容在一行内展示
---graph 以 ASCII 图形显示分支和合并历史。q退出   f向下翻页 b向上翻页 j下滚 k上滚
-最新的在上面,hash
-todo:format 占位符
-todo：标签
-todo：游离头？
+## 查看更新日志
+```
+git log --pretty=oneline  
+git log --oneline --graph --all  
+git log --all --graph --oneline --decorate  
+```
+`--decorate` 显示每个提交的引用，包括分支、标签等  
+`--all` 显示所有分支的提交历史，包括远程分支和分离头指针。  
+`--pretty=oneline` 每次更新内容在一行内展示  
+`--graph` 以 ASCII 图形显示分支和合并历史。  
+`q`退出   `f`向下翻页 `b`向上翻页 `j`下滚 `k`上滚  
+最新的在上面,hash  
+todo:format 占位符  
+todo：标签  
+todo：游离头？  
 
-回退某一版本
+## 回退某一版本
+```
 git checkout <hash>
+```
 
-取回远端最新消息
+## 取回远端最新消息
+```
 git fetch origin
-
+```
 
 
 
@@ -57,22 +75,29 @@ todo:多个仓库管理
 todo：更改某一版本的内容
 
 
-列出分支
-git branch 
--a 列出所有本地和远程分支
-*代表当前的活动分支
+## 列出分支
+```
+git branch   
+```
+`-a `列出所有本地和远程分支  
+`*`代表当前的活动分支
 
-查看特定分支
+## 查看特定分支
+```
 git show 9854d15
+```
 
-创建分支 名字为v4 hash为9854d15  缺省hash创建空分支
+## 创建分支 
+名字为v4 hash为9854d15 (缺省hash会创建空分支)  
+```
 git branch v4 9854d15
-
-todo：删除分支 分支相关 分支切换 重命名分支 分支merge   i 进入编辑模式    esc 退出编辑模式    :wq 退出    :q! 取消merge
+```
+todo：删除分支 分支相关 分支切换 重命名分支 分支merge   `i` 进入编辑模式    `esc` 退出编辑模式    `:wq` 退出    `:q!` 取消merge
 
 todo: # 把 master 回退到 merge 之前那次提交（3d5d423）
+```
 git reset --hard 3d5d423
-
+```
 todo: origin master head 区别
 
 todo：git reflog
