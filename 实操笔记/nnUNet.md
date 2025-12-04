@@ -12,10 +12,24 @@ parser = argparse.ArgumentParser()
 ```
 
 ## ERROR：One or more background workers are no longer alive.
-Windows系统训练时，一般是由于多线程引起的，可以尝试将多线程关闭，设置`num_threads=0`，或者使用单线程训练。
+~~Windows系统训练时，一般是由于多线程引起的，可以尝试将多线程关闭，设置`num_threads=0`，或者使用单线程训练。~~  
+一般是由于多线程引起的，具体原因可能是设置的线程数（？）大于cpu核心数，可以尝试减少线程数，设置`num_threads`。  
 查看 *nnunetv2/configuration.py* 或 *nnunetv2/utilities/default_n_proc_DA.py* 文件中线程设定。
 ```py
-        else:
-            use_this = 0  # default value
+    else:
+        use_this = 0  # default value
 ```
 在此处设置默认值。
+
+---
+---
+## 调试
+
+使用qt5后端进行数据可视化
+```py
+import matplotlib 
+matplotlib.use('Qt5Agg') 
+import matplotlib.pyplot as plt  
+plt.plot([1, 2, 3], [4, 5, 1]) 
+plt.show(block=True) # 此时应弹出窗口显示图像
+```
