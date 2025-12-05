@@ -13,3 +13,8 @@ zip命令压缩指定文件下的全部文件
 zip -r name.zip path/to/folder/
 # 压缩包存放在当前路径（不是原文件夹的路径）
 ```
+
+无视版本匹配，直接安装指定包
+```
+python -m pip install chumpy --no-build-isolation
+```
