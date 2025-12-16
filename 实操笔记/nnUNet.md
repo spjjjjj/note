@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 查看 *nnunetv2/configuration.py* 或 *nnunetv2/utilities/default_n_proc_DA.py* 文件中线程设定。
 ```py
     else:
-        use_this = 0  # default value
+        use_this = 5  # default value
 ```
 在此处设置默认值。
 
